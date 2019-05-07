@@ -10,35 +10,44 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:textSize="25dp"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.455"
-            app:textAllCaps="true" android:id="@+id/textView"/>
+            app:textAllCaps="true" android:id="@+id/question_text_view"/>
     <android.support.constraint.ConstraintLayout
             android:id="@+id/container"
             android:layout_width="250dp"
             android:layout_height="100dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="@+id/textView">
+            app:layout_constraintTop_toBottomOf="@+id/question_text_view"
+            app:layout_constraintStart_toStartOf="@+id/question_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/question_text_view">
 
 
         <Button
-                android:text="true"
+                android:text="@string/true_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button"
-                android:layout_marginStart="81dp" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/constraintLayout"/>
+                android:id="@+id/btn_true"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
         <Button
-                android:text="false"
+                android:text="@string/false_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/btn_false" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp"/>
     </android.support.constraint.ConstraintLayout>
+    <Button
+            android:text="@string/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_button" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/container" app:layout_constraintStart_toStartOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="@+id/container"/>
 
 </android.support.constraint.ConstraintLayout>
